@@ -28,7 +28,8 @@ RUN apt-get update && apt-get install -y \
     python3-wheel \
     --no-install-recommends && \
     python3.6 -m pip install --upgrade pip && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    alias python=python3.6
 
 # install necessary locales
 RUN apt-get update && apt-get install -y locales \
